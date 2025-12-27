@@ -1,0 +1,184 @@
+/* Reset & Font */
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+/* Background Utama Gradient */
+.elegant-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f7fa 0%, #80cbc4 100%);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Kartu Utama */
+.elegant-card {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  min-height: 550px;
+}
+
+/* Dekorasi Bulatan Blur */
+.circle-deco {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.6;
+  z-index: 1;
+  pointer-events: none;
+}
+.top-right { top: -50px; right: -50px; background: #b2dfdb; }
+.bottom-left { bottom: -50px; left: -50px; background: #80cbc4; }
+
+/* --- Bagian Kiri (Brand) --- */
+.card-left {
+  flex: 1;
+  background: linear-gradient(135deg, #009688 0%, #00695c 100%);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  position: relative;
+}
+
+/* Pola Dot Overlay */
+.card-left::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.2) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.3;
+}
+
+.brand-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  position: relative; z-index: 2;
+}
+
+.brand-icon {
+  width: 40px; height: 40px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: bold; font-size: 20px;
+}
+
+.card-left h2 { font-size: 32px; margin-bottom: 15px; position: relative; z-index: 2; }
+.card-left p { color: #b2dfdb; font-size: 16px; position: relative; z-index: 2; }
+.copyright { font-size: 12px; color: #80cbc4; position: relative; z-index: 2; }
+
+/* --- Bagian Kanan (Form) --- */
+.card-right {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+}
+
+.form-header h3 { font-size: 28px; margin: 0 0 10px 0; color: #333; }
+.form-header p { color: #666; margin-bottom: 30px; }
+
+/* Input Styles */
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #444; font-size: 14px; }
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper .icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 12px 15px 12px 45px; /* Padding kiri besar biar ga nubruk ikon */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #f9fafb;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+.input-wrapper input:focus {
+  outline: none;
+  border-color: #009688;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(0, 150, 136, 0.1);
+}
+
+/* Options & Button */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: #666;
+}
+.form-options a { color: #009688; text-decoration: none; font-weight: 600; }
+
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  background: #009688;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover { background: #00796b; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0, 150, 136, 0.3); }
+.btn-primary:disabled { background: #ccc; cursor: not-allowed; transform: none; }
+
+/* Alert Error */
+.alert-box {
+  background: #ffebee;
+  color: #c62828;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex; align-items: center; gap: 10px;
+  font-size: 14px;
+}
+
+.spin { animation: spin 1s linear infinite; }
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+  .elegant-card { flex-direction: column; max-width: 400px; }
+  .card-left { display: none; } /* Sembunyikan bagian branding di HP */
+  .card-right { padding: 30px; }
+}

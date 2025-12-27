@@ -1,0 +1,21 @@
+# --- SAMPAH UMUM ---
+.DS_Store
+Thumbs.db
+
+# --- PYTHON ---
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+
+# --- JAVASCRIPT/NODE ---
+node_modules/
+dist/
+build/
+
+# --- MOBILE/FLUTTER ---
+.dart_tool/
+.pub-cache/
+.gradle/
+app/build/

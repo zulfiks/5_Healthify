@@ -1,0 +1,110 @@
+/* Karena gayanya 99% sama dengan login, kita bisa copy-paste
+  dari login.css dan hanya mengganti nama kelas utamanya.
+*/
+
+/* Mengatur seluruh halaman */
+.register-container {
+  min-height: 100vh;
+  background-color: #a0d8d4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+/* Logo dan Judul Aplikasi (Sama persis dengan login) */
+.app-logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.app-title {
+  color: white;
+  margin-bottom: 30px;
+}
+
+/* Kartu Form Sign Up */
+.register-card {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-card h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: capitalize; /* Agar 'sign up' jadi 'Sign Up' */
+}
+
+/* Styling Form dan Input (Sama persis dengan login) */
+.register-form {
+  width: 100%;
+}
+
+.register-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  text-align: left;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: none;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  font-size: 16px;
+  box-sizing: border-box; 
+}
+
+.input-group i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+/* Tombol Masuk */
+.register-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Link di bawah tombol */
+.register-links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.register-links p {
+  color: #888;
+}
+
+.register-links .login-link {
+  color: #00aaff;
+  font-weight: bold;
+  text-decoration: none;
+}
